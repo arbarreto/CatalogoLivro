@@ -1,0 +1,340 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.7.10-log
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema dblivraria
+--
+
+CREATE DATABASE IF NOT EXISTS dblivraria;
+USE dblivraria;
+
+--
+-- Definition of table `tblautor`
+--
+
+DROP TABLE IF EXISTS `tblautor`;
+CREATE TABLE `tblautor` (
+  `codautor` int(11) NOT NULL AUTO_INCREMENT,
+  `tituloautor` varchar(60) NOT NULL,
+  `descricaoautor` text NOT NULL,
+  `fotoautor` varchar(60) NOT NULL DEFAULT '',
+  `statusautor` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`codautor`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tblautor`
+--
+
+/*!40000 ALTER TABLE `tblautor` DISABLE KEYS */;
+INSERT INTO `tblautor` (`codautor`,`tituloautor`,`descricaoautor`,`fotoautor`,`statusautor`) VALUES 
+ (15,'Cassandra Clare',' Cassandra Clare é filha de pais norte-americanos, nascida em Teerã, no Irã. Passou grande parte de sua infância viajando pelo mundo com sua família. Viveu na França, Inglaterra e Suíça antes de completar dez anos de idade. Com as frequentes mudanças de sua família, Clare encontrou familiaridade nos livros e sempre encontrava-se com um debaixo do braço. Estudou em um colégio de Los Angeles, onde ela costumava escrever histórias para divertir seus colegas, incluindo um romance épico chamado \"The Beautiful Cassandra\", baseado na história homônimo de Jane Austen.\r\n\r\nApós a faculdade, Clare começou a trabalhar em inúmeras revistas de entretenimento e tabloides, incluindo The Hollywood Reporter.\r\n\r\nCassandra também é a mais famosa escritora de fanfics de Harry Potter. Ela também é amiga da escritora Holly Black, e seus livros ocasionalmente se coincidem, com Clare mencionando personagens dos livros de Black e vice-versa.\r\n\r\nEla mora atualmente em Amherst, Massachusetts, com seu marido, Joshua Lewis, e três gatos.  ','imagens/800px-Cassandra_Clare_by_Gage_Skidmore,_2013_b.jpg',1),
+ (16,'Autor Desconhecido',' ','imagens/Escritor1.png',0);
+/*!40000 ALTER TABLE `tblautor` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tblcategoria`
+--
+
+DROP TABLE IF EXISTS `tblcategoria`;
+CREATE TABLE `tblcategoria` (
+  `codcat` int(11) NOT NULL AUTO_INCREMENT,
+  `nomecat` varchar(60) NOT NULL,
+  PRIMARY KEY (`codcat`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tblcategoria`
+--
+
+/*!40000 ALTER TABLE `tblcategoria` DISABLE KEYS */;
+INSERT INTO `tblcategoria` (`codcat`,`nomecat`) VALUES 
+ (1,'Técnicos'),
+ (2,'Didáticos'),
+ (3,'Religiosos'),
+ (4,'Infantis');
+/*!40000 ALTER TABLE `tblcategoria` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tblfaleconosco`
+--
+
+DROP TABLE IF EXISTS `tblfaleconosco`;
+CREATE TABLE `tblfaleconosco` (
+  `cod` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) NOT NULL,
+  `tel` varchar(12) DEFAULT NULL,
+  `cel` varchar(13) NOT NULL,
+  `email` varchar(60) NOT NULL,
+  `sexo` varchar(10) NOT NULL,
+  `profissao` varchar(60) DEFAULT NULL,
+  `home` varchar(60) DEFAULT NULL,
+  `link` varchar(60) DEFAULT NULL,
+  `info` text,
+  `suge` text,
+  PRIMARY KEY (`cod`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tblfaleconosco`
+--
+
+/*!40000 ALTER TABLE `tblfaleconosco` DISABLE KEYS */;
+INSERT INTO `tblfaleconosco` (`cod`,`nome`,`tel`,`cel`,`email`,`sexo`,`profissao`,`home`,`link`,`info`,`suge`) VALUES 
+ (17,'reyhqeth','adadfrthdf','dthasdtg','hddfhfvhjn@fgdfg','Masculino','xfgjxfzgj','xfhjf','http://localhost/Projeto1/home.php','zdtghzdftg','zdfstjsy'),
+ (19,'sfgsf','fhdf','dsfgf','amanda@amanda.com','Masculino','dgnafgn','gdnafgn','http://localhost/Projeto1/fale.php','Srfga','rghasdfgadfg'),
+ (22,'Amadna','11 4789-3241','11 98707-8026','amanda@pegou','Feminino','Estagiaria','','','',''),
+ (27,'Amanda Novo','11 1111-1111','654321','amanda@amanda.amanda','Feminino','ZDGN','gdnafgn','http://localhost/Projeto1/fale.php','maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=','maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength=\"12\"maxlength='),
+ (30,'teste','','94894-1929','julia@julia.com','Feminino','dgnafgn','','','A madeira é um material produzido a partir do tecido formado pelas plantas lenhosas com funções de sustentação mecânica. Sendo um material naturalmente resistente e relativamente leve, é frequentemente utilizado para fins estruturais e de sustentação de construções. É um material orgânico, sólido, de composição complexa, onde predominam as fibras de celulose e hemicelulose unidas por lenhina.\r\n\r\nCaracteriza-se por absorver facilmente água (higroscopia) e por apresentar propriedades físicas diferentes consoante a orientação espacial (ortotropia). As plantas que produzem madeira (árvores) são perenes e lenhosas, caracterizadas pela presença de caules de grandes dimensões, em geral denominados troncos, que crescem em diâmetro ano após ano. Pela sua disponibilidade e características, a madeira foi um dos primeiros materiais a ser utilizado pela humanidade, mantendo, apesar do aparecimento dos materiais sintéticos, uma imensidade de usos directos e servindo de matéria-prima para múltiplos outros produtos. É também uma importante fonte de energia, sendo utilizada como lenha para cozinhar e outros usos domésticos numa parte importante do mundo.\r\n\r\nA sua utilização para a produção de polpa está na origem da indústria papeleira e de algumas indústrias químicas nas quais é utilizada como fonte de diversos compostos orgânicos. A sua utilização na indústria de marcenaria para fabricação de móveis é uma das mais expandidas, o mesmo acontecendo na sua utilização em carpintaria para construção de','A madeira é um material produzido a partir do tecido formado pelas plantas lenhosas com funções de sustentação mecânica. Sendo um material naturalmente resistente e relativamente leve, é frequentemente utilizado para fins estruturais e de sustentação de construções. É um material orgânico, sólido, de composição complexa, onde predominam as fibras de celulose e hemicelulose unidas por lenhina.\r\n\r\nCaracteriza-se por absorver facilmente água (higroscopia) e por apresentar propriedades físicas diferentes consoante a orientação espacial (ortotropia). As plantas que produzem madeira (árvores) são perenes e lenhosas, caracterizadas pela presença de caules de grandes dimensões, em geral denominados troncos, que crescem em diâmetro ano após ano. Pela sua disponibilidade e características, a madeira foi um dos primeiros materiais a ser utilizado pela humanidade, mantendo, apesar do aparecimento dos materiais sintéticos, uma imensidade de usos directos e servindo de matéria-prima para múltiplos outros produtos. É também uma importante fonte de energia, sendo utilizada como lenha para cozinhar e outros usos domésticos numa parte importante do mundo.\r\n\r\nA sua utilização para a produção de polpa está na origem da indústria papeleira e de algumas indústrias químicas nas quais é utilizada como fonte de diversos compostos orgânicos. A sua utilização na indústria de marcenaria para fabricação de móveis é uma das mais expandidas, o mesmo acontecendo na sua utilização em carpintaria para construção de');
+/*!40000 ALTER TABLE `tblfaleconosco` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tbllivro`
+--
+
+DROP TABLE IF EXISTS `tbllivro`;
+CREATE TABLE `tbllivro` (
+  `codlivro` int(11) NOT NULL AUTO_INCREMENT,
+  `titulolivro` varchar(60) NOT NULL,
+  `descricaolivro` text NOT NULL,
+  `fotolivro` varchar(120) NOT NULL,
+  `statuslivro` tinyint(3) unsigned DEFAULT NULL,
+  PRIMARY KEY (`codlivro`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbllivro`
+--
+
+/*!40000 ALTER TABLE `tbllivro` DISABLE KEYS */;
+INSERT INTO `tbllivro` (`codlivro`,`titulolivro`,`descricaolivro`,`fotolivro`,`statuslivro`) VALUES 
+ (2,'Quem é Você, Alasca?','Miles Halter, um adolescente que leva uma vida sem graça e sem muitas emoções na Flórida. Ele tem um gosto peculiar: memorizar as últimas palavras de grandes personalidades da história. E uma dessas personalidades: François Rabelais, um escritor do século XV, que dissera no leito de morte estava indo em “busca de uma Grande Talvez”. Para não ter que esperar o próprio fim para encontrar a sua Grande Incógnita, Miles decide fazer as malas e partir.\r\n\r\nEle vai para um colégio interno no ensolarado Alabama, onde seu pai e outros parentes já haviam tido experiências extraordinárias. Em Culver Creek, Miles conhece seu colega de quarto Chip Martin \"Coronel\", um garoto baixo com voz grossa, o Takumi, um garoto asiático e amigo do Coronel e da inteligente, engraçada, louca e incrivelmente sexy, Alaska Young. Com seus amigos, bebidas, fumos e trotes, Miles, descobre um pouco da sua seu \"Grande Talvez\"!\r\n','imagens/images.jpg',0),
+ (3,'O Pequeno Príncipe','A história começa com o narrador descrevendo suas recordações, em que aos 6 anos de idade fez um desenho de uma jiboia que havia engolido um elefante. Quando perguntava o que os adultos viam em seu desenho, todos eles achavam que o garoto havia desenhado um chapéu. Ao corrigir as pessoas sobre seu desenho, era sempre respondido que precisava de hobby mais sério e maduro. O narrador então lamenta a falta de criatividade demonstrada pelos adultos.\r\n\r\nSem incentivos e decepcionado com as reações, ele desiste da carreira de pintor, e se tornou aviador. Durante seu voo, tem uma pane em seu avião no Deserto do Saara. Ao acordar, depois do acidente, se depara com um menino que o autor descrito como tendo cabelos de ouro e um cachecol vermelho, que lhe pede para desenhar um carneiro. O narrador então mostra-lhe o seu antigo desenho do elefante dentro de uma jiboia, e para sua surpresa, o menino interpreta-o corretamente, apesar de estar insatisfeito pois ainda queria o desenho de um carneiro.\r\n\r\nConforme a história passa, o aviador descobre que o menino vive no asteroide B-612, e que só tem uma rosa que fala com ele, e que tem três vulcões, sendo um deles extinto, e que o principezinho assiste quarenta e três pôr-do-sol para se divertir ou quando está triste.\r\n\r\nO autor conta um pouco da história dele, a história de como o principezinho havia chegado ao Deserto do Saara, fala de como são as crianças e de como são as pessoas grandes; e envolve o leitor em mais um mistério no capítulo XXVII: que fala que o carneiro que desenhou para o principezinho poderia comer a sua flor.','imagens/O-pequeno-príncipe.jpg',0),
+ (4,'teste','teste','imagens/azul-e-a-cor-mais-quente-livro-quadrinho-gls-julie-maroh-10390-MLB20027124131_012014-O.jpg',0),
+ (5,'Ball Jointed Alice ','Sexy. Emotiva. Humana. Essa é a história da boneca Alice.\r\nFrank é um homem sem esperança nenhuma. Um punk com um passado insano que, numa manhã de ressaca, acorda com uma boneca lhe desejando bom dia. Ele sabe bem quem é essa boneca e como ela se chama. Alice é uma ball jointed doll criada por Frank em seu projeto mais ambicioso: recuperar as memórias e os sentimentos por uma louquinha de mesmo nome. Mas ao tentar puxar a linha da lembrança do embolado novelo que é o passado, Frank acaba puxando a linha da tragédia. Acompanhado por seus antigos companheiros de hospício: a gothic lolita Tay, o estudante de direito Shin e a sociopata Emi, ele se envolve em um plano de vingança contra o hospital que os massacrou a alma e levou Alice à morte.\r\nBall Jointed Alice – Uma história de amor e morte é um sensível romance de Priscilla Matsumoto. Flutuando entre a melancolia e o erotismo, esse é um relato cru de uma juventude cínica que parece perdida, mas que sabe demais sobre a natureza do mundo para não desistir dele.','imagens/bja-capa-oficial.jpg',1),
+ (6,'testedhcefd','dbejbebhverf','imagens/2224576.jpg',NULL);
+/*!40000 ALTER TABLE `tbllivro` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tbllivro_promo`
+--
+
+DROP TABLE IF EXISTS `tbllivro_promo`;
+CREATE TABLE `tbllivro_promo` (
+  `codlp` int(11) NOT NULL AUTO_INCREMENT,
+  `codpromo` int(11) NOT NULL,
+  `codlivro` int(11) NOT NULL,
+  PRIMARY KEY (`codlp`),
+  KEY `codpromo` (`codpromo`),
+  KEY `codlivro` (`codlivro`),
+  CONSTRAINT `tbllivro_promo_ibfk_1` FOREIGN KEY (`codpromo`) REFERENCES `tblpromocao` (`codpromo`),
+  CONSTRAINT `tbllivro_promo_ibfk_2` FOREIGN KEY (`codlivro`) REFERENCES `tbllivro` (`codlivro`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbllivro_promo`
+--
+
+/*!40000 ALTER TABLE `tbllivro_promo` DISABLE KEYS */;
+INSERT INTO `tbllivro_promo` (`codlp`,`codpromo`,`codlivro`) VALUES 
+ (1,1,2),
+ (2,1,3),
+ (3,1,3),
+ (4,1,3),
+ (5,2,2),
+ (6,2,2);
+/*!40000 ALTER TABLE `tbllivro_promo` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tbllojas`
+--
+
+DROP TABLE IF EXISTS `tbllojas`;
+CREATE TABLE `tbllojas` (
+  `codloja` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeloja` varchar(60) NOT NULL,
+  `logradouro` varchar(60) NOT NULL,
+  `estado` varchar(60) NOT NULL,
+  `telefoneloja` varchar(60) NOT NULL,
+  `fotoloja` varchar(120) NOT NULL,
+  PRIMARY KEY (`codloja`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbllojas`
+--
+
+/*!40000 ALTER TABLE `tbllojas` DISABLE KEYS */;
+INSERT INTO `tbllojas` (`codloja`,`nomeloja`,`logradouro`,`estado`,`telefoneloja`,`fotoloja`) VALUES 
+ (5,'Sede','Av. dos Autonomistas, 1828 - Vila Yara',' Osasco - SP','11 3652-0330','imagens/14492013112013_LEITURAMaceioIMG_7481fotoFlaviaCorreia1.png');
+/*!40000 ALTER TABLE `tbllojas` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tblpromocao`
+--
+
+DROP TABLE IF EXISTS `tblpromocao`;
+CREATE TABLE `tblpromocao` (
+  `codpromo` int(11) NOT NULL AUTO_INCREMENT,
+  `nomepromo` varchar(60) NOT NULL,
+  `dtInicio` varchar(10) NOT NULL DEFAULT '',
+  `dtFinal` varchar(10) NOT NULL DEFAULT '',
+  `statuspromo` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`codpromo`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tblpromocao`
+--
+
+/*!40000 ALTER TABLE `tblpromocao` DISABLE KEYS */;
+INSERT INTO `tblpromocao` (`codpromo`,`nomepromo`,`dtInicio`,`dtFinal`,`statuspromo`) VALUES 
+ (1,'Dia das Mães','01/03/2016','10/03/2016',0),
+ (2,'Teste','01/03/2015','10/03/2014',1);
+/*!40000 ALTER TABLE `tblpromocao` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tblsobre`
+--
+
+DROP TABLE IF EXISTS `tblsobre`;
+CREATE TABLE `tblsobre` (
+  `codsobre` int(11) NOT NULL AUTO_INCREMENT,
+  `nomesobre` varchar(60) NOT NULL,
+  `descricaosobre` text NOT NULL,
+  `fotosobre` varchar(120) NOT NULL,
+  PRIMARY KEY (`codsobre`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tblsobre`
+--
+
+/*!40000 ALTER TABLE `tblsobre` DISABLE KEYS */;
+INSERT INTO `tblsobre` (`codsobre`,`nomesobre`,`descricaosobre`,`fotosobre`) VALUES 
+ (3,'Livraria Woody Woodpecker SA',' Visão:</br>\r\nNós acreditamos no poder transformador da informação e da cultura. Nosso objetivo é ser a melhor loja de entretenimento e informação, nos consolidando como a grande referência do setor. E quanto mais crescermos, mais vamos disseminar essa informação, ajudando assim as pessoas a construir e viver em um mundo melhor e mais justo.</br>\r\nMissão:</br>\r\nDisponibilizar um acervo de títulos completo, com equipe de colaboradores competente e treinada, orientada a fazer o momento da compra uma experiência única de descoberta e prazer.  ','imagens/20120130_fernando-brandao_livraria-cultura-curitiba_002.jpg');
+/*!40000 ALTER TABLE `tblsobre` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tblsubcategoria`
+--
+
+DROP TABLE IF EXISTS `tblsubcategoria`;
+CREATE TABLE `tblsubcategoria` (
+  `codsubcat` int(11) NOT NULL AUTO_INCREMENT,
+  `codcat` int(11) NOT NULL,
+  `nomesubcat` varchar(60) NOT NULL,
+  PRIMARY KEY (`codsubcat`),
+  KEY `codcat` (`codcat`),
+  CONSTRAINT `tblsubcategoria_ibfk_1` FOREIGN KEY (`codcat`) REFERENCES `tblcategoria` (`codcat`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tblsubcategoria`
+--
+
+/*!40000 ALTER TABLE `tblsubcategoria` DISABLE KEYS */;
+INSERT INTO `tblsubcategoria` (`codsubcat`,`codcat`,`nomesubcat`) VALUES 
+ (1,1,'Informática'),
+ (2,1,'Eletrônica'),
+ (3,1,'Mecânica'),
+ (4,1,'Eletricista'),
+ (5,1,'Arquitetura'),
+ (6,1,'Construção'),
+ (7,2,'Português'),
+ (8,2,'Matemática'),
+ (9,2,'Fisíca'),
+ (10,2,'Química'),
+ (11,3,'Católicos'),
+ (12,3,'Espiritas'),
+ (13,4,'Mangás'),
+ (14,4,'Gibis'),
+ (15,4,'Contos'),
+ (16,4,'Educativos');
+/*!40000 ALTER TABLE `tblsubcategoria` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tbltipouser`
+--
+
+DROP TABLE IF EXISTS `tbltipouser`;
+CREATE TABLE `tbltipouser` (
+  `codtipo` int(11) NOT NULL AUTO_INCREMENT,
+  `nometipo` varchar(60) NOT NULL,
+  PRIMARY KEY (`codtipo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbltipouser`
+--
+
+/*!40000 ALTER TABLE `tbltipouser` DISABLE KEYS */;
+INSERT INTO `tbltipouser` (`codtipo`,`nometipo`) VALUES 
+ (1,'Administrador do Sistema'),
+ (2,'Operador Básico'),
+ (3,'Cataloguista');
+/*!40000 ALTER TABLE `tbltipouser` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tbluser`
+--
+
+DROP TABLE IF EXISTS `tbluser`;
+CREATE TABLE `tbluser` (
+  `coduser` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeuser` varchar(60) NOT NULL DEFAULT '',
+  `usuario` varchar(60) NOT NULL,
+  `senha` varchar(60) NOT NULL,
+  `codtipo` int(11) NOT NULL,
+  PRIMARY KEY (`coduser`),
+  KEY `codtipo` (`codtipo`),
+  CONSTRAINT `tbluser_ibfk_1` FOREIGN KEY (`codtipo`) REFERENCES `tbltipouser` (`codtipo`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbluser`
+--
+
+/*!40000 ALTER TABLE `tbluser` DISABLE KEYS */;
+INSERT INTO `tbluser` (`coduser`,`nomeuser`,`usuario`,`senha`,`codtipo`) VALUES 
+ (1,'Amanda','amanda','psp',1),
+ (6,'Julia','jujuamozao','123',1),
+ (7,'Julia ','julia','123',2),
+ (8,'dssdv','svasfva','asf',1),
+ (10,'amanda','adfhadf','lkg',2),
+ (11,'Marcel','marcel','123',3);
+/*!40000 ALTER TABLE `tbluser` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

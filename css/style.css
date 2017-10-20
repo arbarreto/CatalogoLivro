@@ -1,0 +1,325 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+a{
+	font-family:"Times New Roman", Times, serif;
+	color:#071134;
+	text-decoration:none;
+	}
+
+header{
+	/*border:solid 1px #000000;*/
+	width:1100px;
+	height:250px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+.slide1{
+	/*border:solid 1px #000000;*/
+	width:1100px;
+	height:250px;
+	border-radius:20px 20px 0px 0px;
+	}
+.principal{
+	/*border:solid 1px #000000;*/
+	width:1100px;
+	height:550px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:80px;
+	}
+	
+.cabecalho{
+	/*border:solid 1px #000000;*/
+	width:1100px;
+	height:170px;
+	margin-top:-80px;
+	}
+	
+.adm{
+	/*border:solid 1px #000000;*/
+	width:150px;
+	height:150px;
+	margin-top:15px;
+	margin-left:60px;
+	float:left;
+	}
+	
+.bv{
+	float:left;
+	/*border:solid 1px #000000;*/
+	width:230px;
+	height:auto;
+	margin-left:20px;
+	margin-top:20px;
+	font-size:21px;
+	font-family:"Times New Roman", Times, serif;
+	}
+	
+.logout{
+	float:left;
+	/*border:solid 1px #000000;*/
+	width:60px;
+	margin-left:1000px;
+	position:relative;
+	margin-top:-40px;
+	font-size:21px;
+	font-family:"Times New Roman", Times, serif;
+	}
+
+.imgadm{
+	width:100px;
+	height:100px;
+	margin-left:25px;
+	}
+	
+.titulo{
+	/*border:solid 1px #000000;*/
+	height:30px;
+	margin-top:5px;
+	font-size:18px;
+	font-family:"Times New Roman", Times, serif;
+	color:#071134;
+	text-align:center;
+	vertical-align:center;
+	}
+	
+.adm:hover{
+	text-align:center;
+	cursor:pointer;
+	}
+	
+.menu_user:hover{
+	text-align:center;
+	cursor:pointer;
+	}
+	
+.fita{
+	width:1100px;
+	height:8px;
+	background-color:#071134;
+	}
+	
+.consulta{
+	margin-top:15px;
+	/*border:solid 1px #000000;*/
+	width:1100px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+
+	}
+	
+.cor{
+	background:#071134;
+	color:#ecd199;
+	text-align:center;
+	}
+	
+.img_voltar{
+	width:70px;
+	height:80px;
+	margin-left:10px;	
+	}
+	
+.menu_user{
+	/*border:solid 1px #000000;9*/
+	width:150px;
+	height:150px;
+	margin-left:100px;
+	float:left;
+	}
+	
+.menu_adm{
+	/*border:solid 1px #000000;9*/
+	width:150px;
+	height:150px;
+	margin-left:260px;
+	float:left;
+	}
+	
+.menu_livro{
+	/*border:solid 1px #000000;9*/
+	width:150px;
+	height:150px;
+	margin-left:480px;
+	float:left;
+	}
+	
+.menu_promo{
+	/*border:solid 1px #000000;9*/
+	width:150px;
+	height:150px;
+	margin-left:180px;
+	float:left;
+	}
+	
+.cad_user{
+	/*border:solid 1px #000000;*/
+	width:500px;
+	height:300px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-80px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	color:#071134;
+	}
+	
+.add{
+	width:30px;
+	height:30px;
+	margin-left:20px;
+	}
+	
+.form{
+	height:20px;
+	margin-bottom:12px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	}
+	
+.form2{
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	resize:none;
+	}
+	
+.select{
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	}
+	
+.btn{
+	width:100px;
+	height:40px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:20px;
+	color:#071134;
+	}
+	
+.all_user{
+	/*border:solid 1px #000000;*/
+	width:750px;
+	height:400px;
+	margin-top:-50px;
+	overflow:auto;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+.table_user{
+	margin-left:auto;
+	margin-right:auto;
+	}
+.rodape1{
+	/*border:solid 1px #000000;*/
+	width:1100px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15px;
+	background-color:#071134;
+	color:#ecd199;
+	text-align:center;
+	padding-top:5px;
+	border-radius: 0px 0px 10px 10px;
+	z-index:999;
+	}
+	
+.detalhes{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-80px;
+	/*border:solid 1px #000000;*/
+	font-family:"Times New Roman", Times, serif;
+	font-size:19px;
+	}
+	
+.detalhes tr{
+	height:30px;
+	/*border:solid 1px #000000;*/
+	}
+	
+.detalhes td{
+	width:350px;
+	/*border:solid 1px #000000;*/
+	}
+	
+.center{
+	width:400px;
+	text-align:center;
+	}
+	
+.corsim_cornao{
+	background-color:#D8DFFA;
+	}
+	
+.td_info_suge{
+	height:80px;
+	width:350px;
+	overflow:auto;
+	vertical-align:top;
+	/*border:solid 1px #000000;*/
+	}
+	
+.menu_conteudo{
+	/*border:solid 1px #000000;9*/
+	width:150px;
+	height:150px;
+	margin-left:55px;
+	float:left;
+	}
+	
+.menu_conteudo:hover{
+	text-align:center;
+	cursor:pointer;
+	}
+	
+
+.foto_autor{
+	width:60px;
+	height:80px;
+	margin-left:100px;
+	}
+	
+.td_desc{
+	width:290px;
+	height:80px;
+	overflow:auto;
+	vertical-align:top;
+	/*border:solid 1px #000000;*/
+	}
+	
+.all_autor{
+	/*border:solid 1px #000000;*/
+	width:950px;
+	height:420px;
+	margin-top:-70px;
+	overflow:auto;
+	margin-left:120px;
+	}
+	
+.table_autor{
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+.all_lojas{
+	/*border:solid 1px #000000;*/
+	width:950px;
+	margin-top:-70px;
+	margin-left:120px;
+	overflow:auto;
+	font-family:"Times New Roman", Times, serif;
+	font-size:19px;
+	}
+
+
+.foto_loja{
+	width:60px;
+	height:80px;
+	margin-left:70px;
+	}
