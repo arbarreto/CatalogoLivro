@@ -1,0 +1,29 @@
+
+
+adm fale conosco
+	
+	*Consulta contato/ Exclusao contato
+	
+adm Usuarios
+
+	tela 1 cadastro de usuario  admCadUsua.php
+		*Cadastro usuarios /Consulta usuarios /Exclusao usuarios /Edicao usuarios	
+
+	tela 2 cadastro funcoes de usuario  admTipoUsua.php
+	  	*Cadastro funcoes /Consulta funcoes  /Exclusao funcoes  /Edicao funcoes
+
+adm Autores Destaque
+	
+	*Consulta/ Exclusao/ Cadastro/ Edicao
+	
+adm Promocao
+	
+	*Consulta/ Exclusao/ Cadastro/ Edicao
+
+adm Livro do mes
+
+	*Consulta/ Exclusao/ Cadastro/ Edicao
+
+adm Lojas
+	
+	*Consulta/ Exclusao/ Cadastro/ Edicao

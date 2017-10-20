@@ -1,0 +1,474 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CORES  #00003F #354657 #949CA6 #F3F3F3 #000000 */
+
+*{ padding: 0; margin: 0; /* opacity: 0.9; */  font-family: Arial, Helvetica, sans-serif; color: #000;}
+a{ color: #949CA6; font-size: 12pt; text-decoration: none; }	
+textarea { resize: none; overflow: auto; }
+h2,h3{ text-align: center; color: #949CA6;}
+p{padding: 4px;}
+::-webkit-scrollbar { opacity:0; }
+
+body{
+/*	background-image: url(../imagens/grid.png); */ 
+	background-position: center;
+	background-attachment: fixed;	
+	background-repeat: no-repeat; 		
+}	
+.principal{
+	width: 957px;
+	height: 800px;
+	background-color: #354657;
+	margin: auto auto 0;
+	border-radius: 50px;
+	border: solid 4px #949CA6;
+}
+.limite{
+	width: 957px;
+	height: 160px;
+	float: left;
+	border-bottom: 2px solid #949CA6	
+}
+.limite span{
+	float: left;
+	margin: 59px 15px 0px 15px;
+	font-size: 20px;
+	color: #949CA6;
+}
+.cms {
+	width: 164px;
+	height: 134px;
+	float: left;
+	margin: 13px 0 0 45px;
+}
+.imagem-conf{
+	width: 249px;
+	height: 150px;
+	float: right;
+	margin: 4px 82px 0px 0px;
+}
+.usuario{
+	width: 957px;
+	height: 160px;
+	float: left;
+	border-bottom: 2px solid #949CA6;
+}
+.large{
+	float: left;
+	width: 20px;
+	height: 10px;
+}
+.width{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 12px;
+	text-align: center;
+}
+.width a{ text-align: center; margin: 0; }
+.usuario-login{
+	width: 215px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+.usuario-login span{ color: #883432; }
+.logooff{ width: 65px; height: 65px; margin: 10px; text-align: center;}
+.conteudo-cms{
+    width: 950px;
+    height: 434px;
+    float: left;
+    margin: 4px;
+}
+.voltar{
+	width: 30px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    line-height: 27px;
+}
+.voltar a{ font-size: 30pt; }
+.clear{ clear: both; height: 10px; width: 10px; }
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "adm-conteudo.php" */
+.conteudo-adm-conteudo{ width: 950px; height: 394px; float: left; text-align: center; }
+.height-center{ width: 10px; height: 80px; }
+.padding-adm-conteudo{ width: 233px; height: 100px; float: left; }
+.width-adm-conteudo{
+	width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+}
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "adm-conteudo.php" */
+
+.autores-cadastro  p{ color: #949CA6;}
+.loja-cadastro label .autores-cadastro p, label { padding: 4px; clear: both; color: #949CA6; }
+.tr-visualizacao td, .tr-dois td{ color: #949CA6; text-align: center; border: solid 1px; border-radius: 10px; padding: 2px; }
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "loja-cms.php" */
+.conteudo-lojas-cms{
+	width: 950px;
+    height: 394px;
+}
+.loja-cadastro{
+	width: 926px;
+    height: 72px;
+    border: 1px solid;
+	border-radius: 10px;
+    margin-bottom: 10px;
+    float: left;
+	color: #949CA6;
+}
+.lojas-visualizacao{
+	color: #949CA6;
+	border: 1px solid;
+    border-radius: 10px;
+    width: 927px;
+    height: 277px;
+    overflow: auto;
+    float: left;
+}
+.tbl-visualizacao{
+	width: 80%;
+    height: 16%;
+    margin: 8px;
+}
+.img-lojas{ width: 180px; height: 110px; }
+/*OCULTAR A BARRA DE ROLAGEM*/
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "loja-cms.php"*/
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "autores-cms.php" */
+
+.conteudo-autores-cms{ width: 950px; height: 394px; }
+.autores-cadastro{
+	width: 450px;
+    height: 107px;
+    border: 1px solid;
+    border-radius: 10px;
+    float: left;
+    color: #949CA6;
+	margin-right: 8px;
+}
+.autores-visualizacao{
+	width: 910px;
+    height: 254px;
+    float: left;
+    border: solid 1px #949CA6;
+    border-radius: 10px;
+    margin-top: 8px;
+	overflow: auto;
+}
+.tbl-visualizacao-a{
+	width: 97%;
+    height: 19%;
+    margin: 8px;
+}
+.img-autores{ width: 180px; height: 160px; }
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "autores-cms.php" */
+
+/* INICIO AREA DE ESTILIZACAO DA PAGINA autores-destaque-cms.php" */
+
+.autores-destaque{
+	width: 948px;
+    height: 394px;
+    float: left;
+}
+.autores-destaque  h3{ text-align: center; color: #949CA6; }
+.autores-destaque h3{ margin-bottom: 10px;}
+.span-{ text-align: center; font-size: 20px; font-weight: bold; color: #949CA6; }
+.autores-destaque-exibir{
+	border: 1px solid;
+	width: 390px;
+	height: 220px;
+	overflow: auto;
+	float: left;
+	margin: 12px;
+	padding: 12px;
+}
+.img-autores-destaque{ width: 160px; height: 140px; }
+.largura{
+	width: 430px;
+    height: 334px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: #949CA6;
+    float: left;
+    overflow: auto;
+    margin: 7px;
+	padding: 3px;
+}
+.tbl-autores-destaque-cadastrados{ width: 95%; height: 12%; }
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "autores-destaque-cms.php" */
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "livro-mes-cms.php" */
+.conteudo-livro-mes{
+	width: 949px;
+    height: 394px;
+    border-radius: 10px;
+}
+.livro-mes-cadastro{
+	width: 800px;
+    height: 100px;
+    border: solid 1px #949CA6;
+    border-radius: 10px;
+    margin: 10px;
+}
+.livro-mes-exibir{
+	overflow: auto;
+    width: 800px;
+    height: 225px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: solid 1px #949CA6;
+}
+.tbl-livro-mes-visualizacao{
+    width: 94%;
+    height: 21%;
+	margin: 10px;
+}
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "livro-mes-cms.php" */
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "admContato.php" */
+
+.principalAdmContato{ width: 1200px; height: 700px; background-color: #354657; margin: auto auto 0; border-radius: 50px; border: solid 4px #949CA6; }
+.conteudo-cms-adm-contato{
+    width: 1200px;
+    height: 334px;
+    float: left;
+}
+.conteudo-adm-contato{
+	width: 1184px;
+    height: 258px;
+    overflow: auto;
+    border: 1px solid #949CA6;
+    border-radius: 10px;
+    float: left;
+	margin: 7px;
+}
+.conteudo-adm-contato h3{ margin: 4px;}
+.tbl-visualizacao-contato{ width: 98%; height: 29px; text-align: center; margin: 5px; }
+.tr-dois- td{ 
+	color: #949CA6;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "admContato.php" */
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "adm-produtos.php" */
+.conteudo-adm-produtos{
+	width: 949px;
+    height: 198px;
+    text-align: center;
+}
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "adm-produtos.php" */
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "livro-cms.php" */
+.livro-cadastro{
+	width: 450px;
+	height: 158px;
+	border: 1px solid #949CA6;
+	border-radius: 10px;
+	float: left;
+	margin-left: 7px;
+}
+input#botaosalvar{
+	margin-left: 10px;
+}
+.livro-visualizacao{
+	border: 1px solid #949CA6;
+    border-radius: 10px;
+    width: 911px;
+    height: 197px;
+    overflow: auto;
+    margin: 7px;
+    float: left;
+}
+.tbl-visualizacao-livro{ width: 97%; height: 14%; margin: 8px;}
+.img-livro{
+	width: 100px;
+	height: 140px;
+}
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "livro-cms.php" */
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "categoria-cms.php" */
+.conteudo-categoria{
+	width: 940px;
+	height: 360px;
+	float: left;
+	margin: 4px;	
+}
+.cadastrar-categoria{
+	border: solid 1px #949CA6;
+    width: 419px;
+    height: 60px;
+    border-radius: 10px;
+	margin-bottom: 10px;
+}
+.visualiar-categoria{
+	border: 1px solid #949CA6;
+    border-radius: 10px;
+    width: 911px;
+    height: 286px;
+    overflow: auto;
+}
+#tabela-categoria{
+	margin: 7px;
+	width: 36%;
+	height: 14%;
+}
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "categoria-cms.php" */
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "subcategoria-cms.php" */
+.cadastrar-subcategoria{
+    border: solid 1px #949CA6;
+    border-radius: 10px;
+    width: 844px;
+    height: 93px;
+	margin-bottom: 10px;
+}
+.subcategoria-visualizacao{
+	border: solid 1px #949CA6;
+    border-radius: 10px;
+    width: 888px;
+    height: 241px;
+    padding: 7px;
+    overflow: auto;
+}
+.tbl-visualizacao-subcategoria{
+	width: 57%;
+    height: 9%;
+}
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "subcategoria-cms.php" */
+
+.grafico{
+	height: 364px;
+    overflow: auto;
+    width: 947px;
+}
+
+/* INICIO DA AREA DE ESTILIZACAO DA PAGINA "admCadUsua.php" */
+.admCadastroUsuario{
+	width: 950px;
+    height: 394px;
+    float: left;
+}
+.cadastroUsuario{
+	width: 450px;
+    height: 89px;
+    border: 1px solid #949CA6;
+    border-radius: 10px;
+    float: left;
+    margin: 0 7px;
+}
+.consultaUsuario{
+	border: 1px solid #949CA6;
+	border-radius: 10px;
+    margin: 7px;
+    width: 915px;
+    height: 260px;
+    overflow: auto;
+    float: left;
+}
+.tbl-usuario{
+	margin: 5px;
+    width: 60%;
+    height: 17%;
+    text-align: center;
+}
+
+/* FIM DA AREA DE ESTILIZACAO DA PAGINA "admCadUsua.php" */
+
+/*
+				INICIO
+	Area de estilizacao da pagina  
+	"admTipoUsua.php"
+*/
+.admTipoUsuario{
+	width: 942px;
+    height: 387px;
+    margin: 7px;
+    float: left;
+}
+.cadastroTipoUsuario{
+	width: 930px;
+    height: 62px;
+    border: 1px solid #949CA6;
+    border-radius: 10px;
+}
+.consultaTipoUsuario{
+	border: 1px solid #949CA6;
+	border-radius: 10px;
+	margin-top: 10px;
+	width: 930px;
+	height: 275px;
+	overflow: auto;
+}
+.tbl-tipo-usuario{
+	margin: 5px;
+	width: 37%;
+	height: 16%;
+}
+
+/*
+				FIM
+	Area de estilizacao da pagina  
+	"admTipoUsua.php"
+*/
+
+.estica{ height: 347px; float: left; text-align: center; }
+
+.crud{
+	height: 136px;
+	width: 338px;
+	float: left;
+	margin: 0 0 0 263px;
+}
+.padding{
+	float: left;
+	width: 46px;
+	height: 50px;
+}
+
+.padding-{
+	float: left;
+	width: 242px;
+	height: 200px;
+}
+
+.clear-both{ clear: both; }
+
+.width-{
+	width: 150px;
+	float: left;
+	margin: 10px;
+	height: 150px;
+}
+.width- a, div.editar a, div.excluir a{ margin: 0; padding: 0;  font-size: 9pt;}
+
+div.editar, div.excluir{ width: 40px; padding: 3px; text-align: center; }
+
+img { width: 100%; height: 100%; }
+
+footer{
+	float: left;
+	text-align: center;
+	margin-left: 100px;
+	clear: both;
+	color: #949CA6;
+}
+
+
+
+
